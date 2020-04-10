@@ -1,0 +1,43 @@
+<ion-content>
+    <div class="control-header">
+        <ion-icon name="arrow-back" [routerLink]="['/home']"></ion-icon>
+        <ion-icon name="heart"></ion-icon>
+    </div>
+
+    <ion-label class="movieTitle">{{data.title}}</ion-label>
+    <div class="genres">
+        <div class="genre" *ngFor="let genre of genreArray; let i = index">{{genre}}</div>
+    </div>
+    <ion-img class="headerImage" [src]=data.backdrop_path></ion-img>
+    <div class="content info-movie">
+        <div class="rates">
+            <div class="rate">
+                <div>{{data.popularity}}</div>
+                <div>Popularity</div>
+            </div>
+            <div class="rate">
+                <ion-icon name="star"></ion-icon>
+                <div>{{data.vote_average}}<span class="myBorder">/10</span></div>
+            </div>
+            <div class="rate">
+                <div>{{data.vote_count}}</div>
+                <div>Vote Count</div>
+            </div>
+        </div>
+        <div class="overview">
+            <div>Decription</div>
+            <div>{{data.overview}}</div>
+        </div>
+        <div class="overview">
+            <div>Trailers & Teasers</div>
+            <div class="trailers">
+                <div *ngFor="let trailer of trailersData;let i = index" class="trailer"
+                     (click)="openTrailer(trailer.key)">
+                    <ion-icon name="play-circle"></ion-icon>
+                    <ion-img [src]=data.backdrop_path></ion-img>
+                    <div class="trailer-name">{{trailer.name}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-content>

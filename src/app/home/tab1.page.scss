@@ -1,0 +1,53 @@
+ion-content ion-toolbar {
+  --background: translucent;
+}
+
+.slides-ios, .slides-md {
+  --bullet-background: transparent;
+  --bullet-background-active: transparent;
+}
+
+.headerspace {
+  margin: 20px 0;
+  .appicon {
+    width: 30px;
+    display: block;
+    margin: 0 auto;
+
+  }
+  .apptext {
+    margin-top: 6px;
+    font-weight: bold;
+    font-size: 20px;
+    padding-right: 0px;
+  }
+}
+
+.titleheight {
+  height: 40px;
+  .spacecontent{
+    padding-left: 10px;
+    ion-label{
+      font-weight: bold;
+    }
+  }
+  .spacecontent:last-child {
+    text-align: right;
+    padding-right: 10px;
+    ion-label {
+      width: 108px;
+      color: #757575;
+      float: right;
+      text-align: right;
+    }
+  }
+}
+
+.cardheader {
+  font-size: 18px;
+}
+
+.cardtitle {
+  padding: 10px;
+  height: 100px;
+}

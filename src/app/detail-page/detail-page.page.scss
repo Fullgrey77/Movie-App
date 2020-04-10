@@ -1,0 +1,128 @@
+ion-content {
+  --background: #1f3a93;
+}
+
+.control-header {
+  height: 20px;
+  position: absolute;
+  width: calc(100% - 20px);
+  z-index: 1;
+  top: 20px;
+  left: 10px;
+  font-size: 22px;
+  color: white;
+}
+
+.control-header ion-icon:first-child {
+  float: left;
+}
+
+.control-header ion-icon:last-child {
+  float: right;
+}
+
+.headerImage {
+  height: 200px;
+  object-fit: cover;
+  object-position: 100% 0;
+  margin-bottom: 10px;
+}
+
+.info-movie {
+  padding: 0 10px;
+}
+
+.movieTitle {
+  position: absolute;
+  z-index: 1;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-top: 70px;
+  color: white;
+}
+
+.genres {
+  position: absolute;
+  z-index: 1;
+  margin-left: 10px;
+  margin-top: 95px;
+  width: calc(100% - 20px);
+  height: 105px;
+
+  .genre {
+    float: left;
+    width: auto;
+    padding: 7px;
+    border: 1px solid white;
+    margin-right: 4px;
+    border-radius: 16px;
+    font-size: 12px;
+    color: white;
+  }
+}
+
+.rates {
+  width: 100%;
+  height: 120px;
+  display: table;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+
+  .rate {
+    vertical-align: middle;
+    display: table-cell;
+    height: 120px;
+    text-align: center;
+    color: white;
+
+    ion-icon {
+      color: red;
+    }
+  }
+}
+
+.myBorder {
+  font-weight: bold;
+  color: white;
+}
+
+.overview div:first-child:not(.trailer) {
+  padding-top: 10px;
+  margin-bottom: 10px;
+  color: white;
+  font-size: 20px;
+}
+
+.overview div:last-child:not(.trailer) {
+  color: white;
+  font-size: 16px;
+}
+
+.trailer {
+  float: left;
+  width: calc(50% - 5px);
+  margin-bottom: 10px;
+  text-align: center;
+
+  ion-icon {
+    position: absolute;
+    z-index: 1;
+    vertical-align: middle;
+    margin-top: 26px;
+    font-size: 32px;
+    margin-left: -16px;
+  }
+
+  &-name {
+    font-size: 13px !important;
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-top: 5px !important;
+  }
+}
+
+.trailer:nth-child(odd) {
+  margin-right: 10px;
+}
+

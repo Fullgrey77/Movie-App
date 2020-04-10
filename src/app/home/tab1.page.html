@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+    <ion-row class="headerspace">
+        <ion-col size="2">
+            <ion-img class="appicon" src="./../assets/images/cinema.png"></ion-img>
+        </ion-col>
+        <ion-col class="apptext">
+            iMovie App
+        </ion-col>
+    </ion-row>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-row class="titleheight">
+        <ion-col class="spacecontent"><ion-item lines="none"><ion-label>Recent Movies</ion-label></ion-item></ion-col>
+        <ion-col class="spacecontent"><ion-item lines="none"><ion-label>See All</ion-label></ion-item></ion-col>
+    </ion-row>
+    <ion-slides pager="true" [options]="slideOpts">
+        <ion-slide *ngFor="let movie of moviesDataF;let i = index">
+            <ion-card (click)="openDetail(movie)">
+                <ion-img [src]="movie.poster_path"></ion-img>
+                <ion-card-header class="cardheader">
+                    <ion-card-title class="cardtitle">{{movie.title}}</ion-card-title>
+                    <ion-card-subtitle>{{movie.genres}}</ion-card-subtitle>
+                </ion-card-header>
+            </ion-card>
+        </ion-slide>
+    </ion-slides>
+
+    <ion-row class="titleheight">
+        <ion-col class="spacecontent"><ion-item lines="none"><ion-label>Popular Movies</ion-label></ion-item></ion-col>
+        <ion-col class="spacecontent"><ion-item lines="none"><ion-label>See All</ion-label></ion-item></ion-col>
+    </ion-row>
+    <ion-slides pager="true" [options]="slideOpts">
+        <ion-slide *ngFor="let movie of popularMoviesDataF;let i = index">
+            <ion-card (click)="openDetail(movie)">
+                <ion-img [src]="movie.poster_path"></ion-img>
+                <ion-card-header class="cardheader">
+                    <ion-card-title class="cardtitle">{{movie.title}}</ion-card-title>
+                    <ion-card-subtitle>{{movie.genres}}</ion-card-subtitle>
+                </ion-card-header>
+            </ion-card>
+        </ion-slide>
+    </ion-slides>
+</ion-content>
